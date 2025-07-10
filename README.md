@@ -1,5 +1,3 @@
-Here's your `README.md`:
-
 ````markdown
 # Flask + Next.js Fullstack Demo
 
