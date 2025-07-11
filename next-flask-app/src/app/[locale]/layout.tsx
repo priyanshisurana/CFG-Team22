@@ -42,7 +42,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   // Only load messages for the current locale (performance optimization)
-  const messages = await getMessages({locale});
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale}>

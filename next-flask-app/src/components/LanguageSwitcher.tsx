@@ -65,9 +65,7 @@ function LanguageSwitcher() {
       <h2 className="text-lg font-semibold mb-2">
         Languages / भाषाएं / மொழிகள் / భాషలు / ಭಾಷೆಗಳು
       </h2>
-      <div className="flex gap-4 flex-wrap">
-        {renderedLanguages}
-      </div>
+      <div className="flex gap-4 flex-wrap">{renderedLanguages}</div>
     </div>
   );
 }
