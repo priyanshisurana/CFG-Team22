@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function PingPage() {
   const [result, setResult] = useState("");
+  const t = useTranslations("PingPage");
 
   const handlePing = async () => {
     try {
@@ -18,15 +21,22 @@ export default function PingPage() {
 
   return (
     <main className="p-6 space-y-4">
-      <h1 className="text-2xl font-bold">Ping Test</h1>
-      <p>Click the button to check if Flask is responding.</p>
+      <Link
+        href="/"
+        className="text-blue-600 underline hover:text-blue-800 mb-4 inline-block"
+      >
+        ← Back to Home
+      </Link>
+
+      <h1 className="text-2xl font-bold">{t("title")}</h1>
+      <p>{t("description")}</p>
       <button
         onClick={handlePing}
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
       >
-        Ping Flask
+        {t("button")}
       </button>
-      <p className="mt-4">Response: {result}</p>
+      {result && <p className="mt-4">{t("response", { message: result })}</p>}
     </main>
   );
 }

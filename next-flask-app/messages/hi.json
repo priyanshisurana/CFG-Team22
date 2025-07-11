@@ -1,0 +1,64 @@
+{
+  "HomePage": {
+    "title": "फ्लास्क एपीआई डेमो इंडेक्स",
+    "description": "विभिन्न फ्लास्क एपीआई एंडपॉइंट्स का अन्वेषण करें",
+    "navigation": {
+      "ping": "पिंग",
+      "hello": "हैलो",
+      "tasks": "कार्य",
+      "session": "सत्र",
+      "download": "फ़ाइल डाउनलोड",
+      "redirect": "रीडायरेक्ट",
+      "customResponse": "कस्टम रिस्पॉन्स"
+    }
+  },
+  "HelloPage": {
+    "title": "हैलो एपीआई टेस्ट",
+    "description": "अपना नाम टाइप करें और व्यक्तिगत शुभकामना पाने के लिए बटन दबाएं।",
+    "placeholder": "अपना नाम दर्ज करें",
+    "button": "हैलो कहें",
+    "response": "उत्तर: {message}"
+  },
+  "TasksPage": {
+    "title": "कार्य प्रबंधन",
+    "description": "इस सरल इंटरफेस के साथ अपने कार्यों का प्रबंधन करें",
+    "addTask": "कार्य जोड़ें",
+    "newTask": "नया कार्य शीर्षक",
+    "delete": "हटाएं",
+    "completed": "पूर्ण",
+    "pending": "लंबित",
+    "noTasks": "कोई कार्य उपलब्ध नहीं",
+    "error": "त्रुटि: {message}"
+  },
+  "PingPage": {
+    "title": "पिंग टेस्ट",
+    "description": "फ्लास्क बैकएंड से कनेक्शन का परीक्षण करें",
+    "button": "पिंग टेस्ट करें",
+    "response": "उत्तर: {message}"
+  },
+  "SessionPage": {
+    "title": "सत्र प्रबंधन",
+    "description": "सत्र कार्यक्षमता का परीक्षण करें",
+    "setSession": "सत्र सेट करें",
+    "getSession": "सत्र प्राप्त करें",
+    "clearSession": "सत्र साफ़ करें",
+    "sessionData": "सत्र डेटा: {data}"
+  },
+  "DownloadPage": {
+    "title": "फ़ाइल डाउनलोड",
+    "description": "सर्वर से फ़ाइलें डाउनलोड करें",
+    "downloadButton": "फ़ाइल डाउनलोड करें",
+    "downloading": "डाउनलोड हो रहा है..."
+  },
+  "RedirectPage": {
+    "title": "रीडायरेक्ट टेस्ट",
+    "description": "रीडायरेक्ट कार्यक्षमता का परीक्षण करें",
+    "button": "रीडायरेक्ट टेस्ट करें"
+  },
+  "CustomResponsePage": {
+    "title": "कस्टम रिस्पॉन्स",
+    "description": "कस्टम रिस्पॉन्स हैंडलिंग का परीक्षण करें",
+    "button": "कस्टम रिस्पॉन्स प्राप्त करें",
+    "response": "उत्तर: {message}"
+  }
+}

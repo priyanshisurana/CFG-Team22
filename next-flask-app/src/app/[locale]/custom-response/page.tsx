@@ -1,11 +1,13 @@
-// ---------- File: app/custom-response/page.tsx ----------
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function CustomResponsePage() {
   const [response, setResponse] = useState("");
   const [header, setHeader] = useState("");
+  const t = useTranslations("CustomResponsePage");
 
   const handleCustomResponse = async () => {
     try {
@@ -22,21 +24,27 @@ export default function CustomResponsePage() {
 
   return (
     <main className="p-6 space-y-4">
-      <h1 className="text-2xl font-bold">Custom Response Test</h1>
-      <p>
-        This will fetch a response that includes a custom status code and
-        header.
-      </p>
+      <Link
+        href="/"
+        className="text-blue-600 underline hover:text-blue-800 mb-4 inline-block"
+      >
+        ← Back to Home
+      </Link>
+
+      <h1 className="text-2xl font-bold">{t("title")}</h1>
+      <p>{t("description")}</p>
 
       <button
         onClick={handleCustomResponse}
         className="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700"
       >
-        Get Custom Response
+        {t("button")}
       </button>
 
-      <p className="mt-4">Response Body: {response}</p>
-      <p>Custom Header: {header}</p>
+      {response && (
+        <p className="mt-4">{t("response", { message: response })}</p>
+      )}
+      {header && <p>Custom Header: {header}</p>}
     </main>
   );
 }

@@ -1,0 +1,64 @@
+{
+  "HomePage": {
+    "title": "Flask API Demo Index",
+    "description": "Explore different Flask API endpoints",
+    "navigation": {
+      "ping": "Ping",
+      "hello": "Hello",
+      "tasks": "Tasks",
+      "session": "Session",
+      "download": "File Download",
+      "redirect": "Redirect",
+      "customResponse": "Custom Response"
+    }
+  },
+  "HelloPage": {
+    "title": "Hello API Test",
+    "description": "Type your name and click the button to get a personalized greeting.",
+    "placeholder": "Enter your name",
+    "button": "Say Hello",
+    "response": "Response: {message}"
+  },
+  "TasksPage": {
+    "title": "Tasks Management",
+    "description": "Manage your tasks with this simple interface",
+    "addTask": "Add Task",
+    "newTask": "New task title",
+    "delete": "Delete",
+    "completed": "Completed",
+    "pending": "Pending",
+    "noTasks": "No tasks available",
+    "error": "Error: {message}"
+  },
+  "PingPage": {
+    "title": "Ping Test",
+    "description": "Test the connection to the Flask backend",
+    "button": "Test Ping",
+    "response": "Response: {message}"
+  },
+  "SessionPage": {
+    "title": "Session Management",
+    "description": "Test session functionality",
+    "setSession": "Set Session",
+    "getSession": "Get Session",
+    "clearSession": "Clear Session",
+    "sessionData": "Session Data: {data}"
+  },
+  "DownloadPage": {
+    "title": "File Download",
+    "description": "Download files from the server",
+    "downloadButton": "Download File",
+    "downloading": "Downloading..."
+  },
+  "RedirectPage": {
+    "title": "Redirect Test",
+    "description": "Test redirect functionality",
+    "button": "Test Redirect"
+  },
+  "CustomResponsePage": {
+    "title": "Custom Response",
+    "description": "Test custom response handling",
+    "button": "Get Custom Response",
+    "response": "Response: {message}"
+  }
+}

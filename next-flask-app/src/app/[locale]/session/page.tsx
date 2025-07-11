@@ -1,13 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// ---------- File: app/session/page.tsx ----------
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function SessionPage() {
   const [username, setUsername] = useState("");
   const [setMsg, setSetMsg] = useState("");
   const [getMsg, setGetMsg] = useState("");
+  const t = useTranslations("SessionPage");
 
   const handleSetSession = async () => {
     try {
@@ -32,7 +34,20 @@ export default function SessionPage() {
       });
       const data = await res.json();
       setGetMsg(data.username ? `Username: ${data.username}` : data.error);
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (err: any) {
+      setGetMsg("Error: " + err.message);
+    }
+  };
+
+  const handleClearSession = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/api/session/clear", {
+        method: "POST",
+        credentials: "include",
+      });
+      const data = await res.json();
+      setGetMsg(data.message || JSON.stringify(data));
+      setSetMsg("");
     } catch (err: any) {
       setGetMsg("Error: " + err.message);
     }
@@ -40,8 +55,15 @@ export default function SessionPage() {
 
   return (
     <main className="p-6 space-y-4">
-      <h1 className="text-2xl font-bold">Session Management</h1>
-      <p>This page sets and retrieves session data using cookies.</p>
+      <Link
+        href="/"
+        className="text-blue-600 underline hover:text-blue-800 mb-4 inline-block"
+      >
+        ← Back to Home
+      </Link>
+
+      <h1 className="text-2xl font-bold">{t("title")}</h1>
+      <p>{t("description")}</p>
 
       <input
         value={username}
@@ -54,18 +76,24 @@ export default function SessionPage() {
           onClick={handleSetSession}
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
-          Set Session
+          {t("setSession")}
         </button>
         <button
           onClick={handleGetSession}
           className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
         >
-          Get Session
+          {t("getSession")}
+        </button>
+        <button
+          onClick={handleClearSession}
+          className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+        >
+          {t("clearSession")}
         </button>
       </div>
 
-      <p className="mt-2">Set Result: {setMsg}</p>
-      <p>Get Result: {getMsg}</p>
+      {setMsg && <p className="mt-2">{t("sessionData", { data: setMsg })}</p>}
+      {getMsg && <p>{t("sessionData", { data: getMsg })}</p>}
     </main>
   );
 }
