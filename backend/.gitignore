@@ -1,0 +1,17 @@
+# Ignore environment configuration
+.env
+
+# Ignore SQLite or other local DB files
+*.sqlite
+*.db
+
+# Ignore node_modules (you should NEVER push this)
+node_modules/
+
+# Ignore logs
+logs
+*.log
+
+# Ignore OS or IDE files
+.DS_Store
+.vscode/
