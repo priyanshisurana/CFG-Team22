@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2em;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #ff4081;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+
+#language-select {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin-left: 10px;
+  background: #222;
+  color: #ff4081;
+  border: 1px solid #ff4081;
+}
+
+#language-select:focus {
+  outline: none;
+  border-color: #ff0055;
+}
+
+/* Style for Stop button */
+#stop-btn {
+  background: #444;
+  color: #ff4081;
+  margin-left: 10px;
+}
+
+#stop-btn:hover {
+  background: #ff0055;
+  color: #fff;
+}
+
+button:hover {
+  background: #ff0055;
+}
+
+#output {
+  margin-top: 20px;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.interim {
+  color: gray;
+}
+
+.final {
+  color: white;
+  font-weight: bold;
+}

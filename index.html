@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Recognition App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎙️ Voice Recognition Demo</h1>
+    <button id="start-btn">🎤 Start Listening</button>
+    <button id="stop-btn">🛑 Stop Listening</button>
+    <select id="language-select">
+      <option value="en-US">English (US)</option>
+      <option value="hi-IN">Hindi (India)</option>
+      <option value="es-ES">Spanish (Spain)</option>
+      <option value="fr-FR">French (France)</option>
+      <option value="de-DE">German (Germany)</option>
+      <option value="zh-CN">Chinese (Mandarin)</option>
+      <!-- Add more languages as needed -->
+    </select>
+    <div id="output">
+      <span id="interim" class="interim"></span>
+      <span id="final" class="final"></span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
