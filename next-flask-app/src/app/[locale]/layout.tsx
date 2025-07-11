@@ -41,8 +41,8 @@ export default async function LocaleLayout({
   // Enable static rendering
   setRequestLocale(locale);
 
-  // Providing all messages to the client side is the easiest way to get started
-  const messages = await getMessages();
+  // Only load messages for the current locale (performance optimization)
+  const messages = await getMessages({locale});
 
   return (
     <html lang={locale}>

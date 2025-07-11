@@ -22,6 +22,7 @@ export default async function Home({
           <Link
             className="text-blue-600 underline hover:text-blue-800"
             href="/ping"
+            prefetch={true}
           >
             {t("navigation.ping")}
           </Link>
@@ -30,6 +31,7 @@ export default async function Home({
           <Link
             className="text-blue-600 underline hover:text-blue-800"
             href="/hello"
+            prefetch={true}
           >
             {t("navigation.hello")}
           </Link>
@@ -38,6 +40,7 @@ export default async function Home({
           <Link
             className="text-blue-600 underline hover:text-blue-800"
             href="/tasks"
+            prefetch={true}
           >
             {t("navigation.tasks")}
           </Link>
@@ -46,6 +49,7 @@ export default async function Home({
           <Link
             className="text-blue-600 underline hover:text-blue-800"
             href="/session"
+            prefetch={true}
           >
             {t("navigation.session")}
           </Link>
@@ -54,6 +58,7 @@ export default async function Home({
           <Link
             className="text-blue-600 underline hover:text-blue-800"
             href="/download"
+            prefetch={true}
           >
             {t("navigation.download")}
           </Link>
@@ -62,6 +67,7 @@ export default async function Home({
           <Link
             className="text-blue-600 underline hover:text-blue-800"
             href="/redirect"
+            prefetch={true}
           >
             {t("navigation.redirect")}
           </Link>
@@ -70,6 +76,7 @@ export default async function Home({
           <Link
             className="text-blue-600 underline hover:text-blue-800"
             href="/custom-response"
+            prefetch={true}
           >
             {t("navigation.customResponse")}
           </Link>
